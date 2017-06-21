@@ -1,3 +1,4 @@
+{debug}
 {*
 * 2007-2016 PrestaShop
 *
@@ -32,4 +33,10 @@
 {/if}
 {if isset($HOOK_HOME) && $HOOK_HOME|trim}
 	<div class="clearfix">{$HOOK_HOME}</div>
+{/if}
+
+{if $cart_qties < 5}
+	<p>{l s="Add more product"}</p>
+{else}
+    <p>{l s="Good"}</p>
 {/if}

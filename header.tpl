@@ -106,6 +106,9 @@
 									<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
 										<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
 									</a>
+									<p>{$PS_SHOP_NAME|upper} {l s='hello world Today we are the'} {$smarty.now|date_format:"%A %e %B %Y"}</p>
+									<p>{l|truncate:40:"..." s='We are experienced PrestaShop developers and available for PrestaShop development work. We have been developing PrestaShop websites and specialising in e-commerce web development for over 6 years. We follow PrestaShop 1.6 best practices guidelines. '}</p>
+
 								</div>
 								{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
 							</div>
