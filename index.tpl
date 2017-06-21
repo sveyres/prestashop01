@@ -36,7 +36,8 @@
 {/if}
 
 {if $cart_qties < 5}
-	<p>{l s="Add more product"}</p>
+    {assign var="cartFive" value= 5 - $cart_qties}
+	<p>{l s="Add %s product(s) for free shipping" sprintf=$cartFive}</p>
 {else}
     <p>{l s="Good"}</p>
 {/if}
